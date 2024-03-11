@@ -1,0 +1,12 @@
+def age_assignment(*names,**ages):
+    result = []
+    final = ''
+
+    for name in sorted(names):
+        first_letter = name[0]
+        age = ages[first_letter]
+        result.append(f"{name} is {age} years old.")
+
+    for sentence in result:
+        final += sentence + '\n'
+    return final
